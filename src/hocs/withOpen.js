@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-
 const withOpen = (WrappedComponent) => {
 
     return class extends Component {
