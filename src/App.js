@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Promotion from './Promotion'
+import CreditCards from './CreditCards'
+import withOpen from './hocs/withOpen'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const PromotionWithOpen = withOpen(Promotion);
+const CreditCardsWithOpen = withOpen(CreditCards);
+
+class App extends Component {
+    render() {
+        return (
+            <div>
+                {/* <Promotion/>
+                <CreditCards/> */}
+                <PromotionWithOpen/>
+                <CreditCardsWithOpen/>
+            </div>
+        );
+    }
 }
 
 export default App;
